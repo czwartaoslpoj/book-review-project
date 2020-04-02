@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title> hello </title>
+</head>
+<body>
+    <h1>Page with selected book informations:
+    </h1>
+    <div>
+        Book ISBN: {{book.isbn}}  </br> Title:  {{book.title}}  </br> Author: {{book.author}}  </br> Year of publishing: {{book.year}}
+    </div>
+    {% for item in reviews %}
+    <li>
+        book review: {{item[2]}}
+    </li>
+    {% endfor %}
+   
+    
+    <a href="{{url_for('add_review', isbn=book.isbn)}}">
+        Add your own review</a><br>
+    <a href="{{url_for('getIsbnReviewFromGoodReadsApi', isbn=book.isbn)}}">
+        Look at the Good Reads Reviews rating</a>
+    
+    
+    </body>
+    </html>

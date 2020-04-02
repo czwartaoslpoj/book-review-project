@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    
+    <h2>Rate the book from 1 to 5:</h2>
+    </br>
+<form action = "{{url_for('add_review',isbn=isbn)}}" method="post" name="stars">
+    <input type="radio" name="stars" value="1">
+    <label for="stars">1</label><br>
+    <input type="radio"name="stars" value="2">
+    <label for="stars">2</label><br>
+    <input type="radio" name="stars" value="3">
+    <label for="stars">3</label><br>
+    <input type="radio" name="stars" value="4">
+    <label for="stars">4</label><br>
+    <input type="radio" ame="stars" value="5">
+    <label for="stars">5</label>
+<br>
+<br>
+<br>
+    <textarea rows = "7" cols = "90" name = "your_review">
+        Write your review here
+     </textarea><br>
+<button>Submit your own review</button>
+</form>
+</body>
+</html>
